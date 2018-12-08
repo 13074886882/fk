@@ -1,0 +1,25 @@
+.my_toplogin{
+  font-size:1.2rem;
+  color:black;
+  font-family:"黑体";
+  font-weight:500;
+}
+.my_width{
+  width:10rem;
+  line-height:2rem;
+}
+.my_li_width{
+  width:40rem;
+}
+.my_div_width{
+  width:50rem;
+}
+.my_a_width{
+  width:19rem;
+}
+.my_height{
+  height:2rem;
+}
+.my_margin{
+  margin:5rem auto;
+}

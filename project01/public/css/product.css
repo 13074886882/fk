@@ -1,0 +1,66 @@
+body{
+    margin:0;padding:0
+}
+.whiteBG {
+    background: rgba(255, 255, 255, 0.3);
+    min-height: 400px;
+    margin-bottom: 40px;
+}
+.wrapper {
+    width: 1110px;
+    margin: 0 auto;
+}
+.card{
+    overflow:hidden !important;
+}
+.myHrLine{
+    border-top:1px solid #8c0024;
+ 
+}
+.my_left a{
+    font: normal 1.2rem 'Century Gothic','微軟正黑體';
+    color: rgba(140, 0, 36,1);
+    transition: color 0.8s;
+    cursor: pointer;
+    text-shadow:0.2rem 0.2rem 0.2rem pink;
+    text-decoration:none;
+}
+ul .active{
+    font-weight: 700;
+}
+.my_left a:hover{
+    color: rgba(140, 0, 36,0.6);
+
+}
+.productPrice a{
+    color:#999;
+    font:normal 1rem 'Century Gothic','微軟正黑體';
+}
+
+.my_img1{
+
+    transition: opacity 0.8s;
+}
+.my_img1:hover{
+    transform:scale(1.1,1.1)
+}
+.text-align1{
+    text-align:center;
+}
+a.productName{
+    font:normal 16px 'Century Gothic','微軟正黑體';
+    color:black;
+    text-decoration:none;
+
+    cursor: pointer;
+
+}
+a.productName:hover{
+    transition: color 0.8s;
+    text-shadow:0.2rem 0.2rem 0.2rem red;
+
+}
+.productPrice {
+    color:#999;
+    font:normal 14px 'Century Gothic','微軟正黑體';
+}

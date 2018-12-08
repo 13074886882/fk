@@ -1,0 +1,82 @@
+body{
+    margin:0;
+    padding:0;
+}
+.my_body{background-image:url(../img/index_base/boydyBG.jpg);}
+.my_wholebg{
+    background:#fff url(../img/index_base/contentContainerBG.jpg) no-repeat;
+    background-size:100%,3rem;
+}
+.my_header{
+    width:100%;
+}
+.my_footer{
+    width:100%;
+    background: #fff;
+}
+.my_sinput{
+    color:black;
+    padding-left:0.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border:1px solid #1b1e21;
+}
+.my_smallsize{
+    font-family:'Century Gothic';
+    font-size:0.9rem;
+}
+.my_ms_size{
+    font-family:'Century Gothic';
+    font-size:0.5rem;
+}
+.my_fontcolor{color:#ccc;}
+.my_thcolor{color:#999;}
+.my_sedcolor{color:#777;}
+.my_secolor{color:#777;}
+.my_secolor:hover{
+    text-decoration: none;
+    color:#ccc;
+}
+.my_bgcolor{background:rgba(169,41,64,0.9);}
+
+.footDecorationLine{
+    width:100%;
+    height:1px;
+    background:linear-gradient(to right,rgba(140,0,36,0),rgba(140,0,36,1),rgba(140,0,36,0));
+}
+.footTitle{
+    color:#8c0024;
+    font:bold 1rem 'Century Gothic','微軟正黑體';
+    padding-bottom:0.3rem;
+    border-bottom: 2px solid #aaaaaa;
+}
+
+@media screen and (min-width: 992px) {
+    .my_header{
+        width: 100%;
+        height:8rem;
+    }
+    .my_footer{
+        width: 100%;
+        height:14rem;
+    }
+}
+@media screen  and (min-width:768px) and (max-width:991px){
+    .my_header{
+        width: 100%;
+        height: 14rem;
+    }
+    .my_footer{
+        width: 100%;
+        height: 35rem;
+    }
+}
+@media screen and (max-width:768px){
+    .my_header{
+        width: 100%;
+        height: 14rem;
+    }
+    .my_footer{
+        width: 100%;
+        height: 40rem;
+    }
+}
