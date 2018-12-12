@@ -18,7 +18,8 @@ body{
  
 }
 .my_left a{
-    font: normal 1.2rem 'Century Gothic','微軟正黑體';
+    font: normal 1rem 'Century Gothic','微軟正黑體';
+    line-height: 2rem;
     color: rgba(140, 0, 36,1);
     transition: color 0.8s;
     cursor: pointer;
@@ -34,33 +35,78 @@ ul .active{
 }
 .productPrice a{
     color:#999;
-    font:normal 1rem 'Century Gothic','微軟正黑體';
-}
-
-.my_img1{
-
-    transition: opacity 0.8s;
-}
-.my_img1:hover{
-    transform:scale(1.1,1.1)
-}
-.text-align1{
-    text-align:center;
+    font:normal 0.9rem 'Century Gothic','微軟正黑體';
+    line-height: 1.5rem;
 }
 a.productName{
-    font:normal 16px 'Century Gothic','微軟正黑體';
+    font:normal 1rem 'Century Gothic','微軟正黑體';
     color:black;
     text-decoration:none;
-
     cursor: pointer;
-
 }
 a.productName:hover{
     transition: color 0.8s;
-    text-shadow:0.2rem 0.2rem 0.2rem red;
+    text-shadow:0.1rem 0.1rem 0.1rem red;
 
 }
 .productPrice {
     color:#999;
     font:normal 14px 'Century Gothic','微軟正黑體';
 }
+
+/* product01_sou的独立部分 */
+.prePage a, .pageContainer>ul>li>a, .nextPage a {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    font: normal 12px "Century Gothic";
+    color: #8c0024;
+}
+.my_img1{
+    display:block;
+    transition:0.8s;
+}
+.card:hover .my_img1{
+    transform:scale(1.1);
+    /* display:absolute; */
+    top:0;left:0;
+    /* opacity:0.5; */
+}
+.card:hover div{
+    opacity:1;
+}
+.myhovers {
+    position: absolute;
+    font: normal 14px 'Cinzel';
+    width: 120px;
+    height: 20px;
+    letter-spacing: 1px;
+    /* background-color:rgb(161, 143, 143); */
+    border:1px solid white;
+    line-height: 20px;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.8s;
+    border-radius: 10%;
+}
+.miansha{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(94, 86, 89, 0.4);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.prePage>a:hover { color: #999; font-weight: bolder; }
+.pageContainer>ul>li>a:hover{ color: #999; font-weight: bolder; }
+.nextPage a:hover{ color: #999; font-weight: bolder; } 
+

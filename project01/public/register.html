@@ -1,51 +1,276 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
   <meta charset="UTF-8">
-  <title>用户注册</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/login.css">
+  <title>Document</title>
  </head>
- <body>
-	
+
+<body class="my_body">
+<!-- 页面头部01 -->
+
+<div class="my_header_01">
+  <div class="navbar navbar-expand-lg my_bg2color navbar-dark p-0 my_long_height3">
+    <a class="navbar-brand" href="index.html">
+        <img src="img/index_base/logo_rwd.png">
+    </a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#content">
+        <span  class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="content">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="page01.1_about.html">关于美味王</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="page02.1_news.html">最新消息</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="page03_shop.html">线上购物</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="page04.1_join.html">加盟专区</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="page05_contact.html">联系我们</a>
+        </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<div id="my_martop" class="container my_wholebg">
+
+<!-- 页面头部00 -->
+<div class="my_header">
+  <div class="row my_long_height0">
+    <div class="col-4">
+        <a href="index.html">
+        <img class="img-fluid my_long_height0 m-0" src="img/index_base/logo.png">
+        </a>
+    </div>
+    <div class="col-8">
+        <div class="row mt-3 mr-5 my_long_height1">
+        <div class="col-3 d-flex justify-content-center">
+            <input type="text" class="my_sinput m-0 w-75" placeholder="产品搜索"><a class="text-dark btn btn-secondary rounded-0 m-0 pt-1 pl-0 pr-0" href="product.html">GO</a>
+        </div>
+        <div class="col-9 d-flex justify-content-end p-1">
+            <ul class="list-unstyled d-flex justify-content-end align-items-center my_smallsize text-white">
+            <li class="pt-3 m-0">语言/Language
+                <select name="dp" class="border border-0 my_bgcolor text-white">
+                <option value="1">繁体中文</option>
+                <option value="2">简体中文</option>
+                <option value="3">English</option>
+                </select>
+            </li>
+            <li class="pt-3 m-0">&nbsp;<b>|</b>&nbsp;<a class="text-white" href="https://www.foodking.com.tw/cn/" target="_black">粉丝专页</a>&nbsp;<b>|</b>&nbsp;</li>
+            <li class="pt-3 m-0"><a class="text-white" href="page03.1_shop.html">购物车(0)</a>&nbsp;<b>|</b>&nbsp;</li>
+            <li class="pt-3 m-0"><a class="text-white" href="login.html">会员中心</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="row mt-3 mr-4 pr-2">
+        <div class="col-12">
+            <ul class="nav nav-justified text-right my_long_height2">
+            <li class="nav-item text-light text-right m-0">
+                <a class="nav-link text-white p-0" href="page01.1_about.html">关于美味王</a><div class="my_fontcolor my_smallsize">About</div>
+            </li>
+            <li class="nav-item text-light text-right m-0">
+                <a class="nav-link  text-white p-0" href="page02.1_news.html">最新消息</a><div class="my_fontcolor my_smallsize">News</div>
+            </li>
+            <li class="nav-item text-light text-right m-0">
+                <a class="nav-link  text-white p-0" href="page03.1_shop.html">线上购物</a><div class="my_fontcolor my_smallsize ">Online shop</div>
+            </li>
+            <li class="nav-item text-light text-right m-0">
+                <a class="nav-link  text-white p-0" href="page04.1_join.html">加盟专区</a><div class="my_fontcolor my_smallsize">Franchisee</div>
+            </li>
+            <li class="nav-item text-light text-right m-0">
+                <a class="nav-link text-white p-0" href="page05_contact.html">联系我们</a><div class="my_fontcolor my_smallsize">Contact</div>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
 
 
-	
-	<script>
-		function register()
-		{
-			var xhr=new XMLHttpRequest();
-			xhr.onreadystatechange=function()
-			{
-				if(xhr.readyState==4&&xhr.status==200)
-				{
-					var result=xhr.responseText;
-				}
-			}
-			//打开连接
-			xhr.open("post","/myuser/register",true);
-			//修改请求头
-			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-			var formdata="uname="+uname.value+"&upwd="+upwd.value+"&phone="+phone.value+"&user_name="+user_name.value+"&gender="+gender.value;
-			xhr.send(formdata);
-		}
-		//检查用户名是否有被占用
-		function checkUname()
-		{
-			var xhr=new XMLHttpRequest();
-			xhr.onreadystatechange=function()
-			{
-				if(xhr.readyState==4&&xhr.status==200)
-				{var result=xhr.responseText;
-					console.log(result);
-					if(result==1){
-						showName.innerHTML="可以注册";
-					}else{
-						showName.innerHtml="用户名被占用";
-					}
-				}
-			}
-			xhr.open("get","/myuser/checkUname?uname="+uname.value,true);
-			xhr.send(null);
-		}
-	</script>
- </body>
+
+
+<!-- 主体内容 -->
+
+<div class="my_bg3color">
+	<div class="w-100 p-1 mt-3 text-center my_toplogin">会员注册</div>
+	<hr class="my_bgcolor mr-1 ml-1 mt-0 mb-0">
+	<div class="w-100">
+		<form action="">
+			<ul class="my_ul_width list-unstyled d-flex flex-column justify-content-center">
+				<li class="d-flex justify-content-center my_height mt-4">
+					<div class="my_secolor my_smallsize my_width text-center">选择方式</div>
+					<div class="my_div_width">
+            <div class="my_div_width d-flex justify-content-around">
+						<a class="btn btn-transparent my_a_width border p-1 border-primary text-primary rounded-0 my_smallsize" href="login.html">会员登录</a>
+            <a class="btn btn-transparent my_a_width border p-1 border-danger text-danger rounded-0 my_smallsize" href="register.html">会员注册</a>
+          </div>
+					</div>
+				</li>
+				<li class="d-flex justify-content-center my_height mt-4">
+          <div class="my_secolor my_smallsize my_width text-center">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</div>
+          <div class="my_div_width">
+						<input class="my_li_width my_smallsize" type="text" placeholder="请输入您的姓名" name="uname" id="uname">
+						<p class="vali_info">*</p>
+          </div>
+				</li>
+				<li class="d-flex justify-content-center my_height mt-4">
+          <div class="my_secolor my_smallsize my_width text-center">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</div>
+          <div class="my_div_width">
+						<input class="my_li_width my_smallsize" type="email" placeholder="请输入电子信箱" name="user_name" id="user_name">
+						<p class="vali_info">*<span id="UName">含有@符号邮箱</span></p>
+          </div>
+				</li>
+				<li class="d-flex justify-content-center my_height mt-4">
+					<div class="my_secolor my_smallsize my_width text-center">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</div>
+					<div class="my_div_width">
+					<input class="my_li_width my_smallsize" type="password" placeholder="请输入密码" name="upwd" id="upwd">
+					<p class="vali_info">*<span>6位数字</span></p>
+					</div>
+				</li>
+				<li class="d-flex justify-content-center my_height mt-4">
+					<div class="my_secolor my_smallsize my_width text-center">确认密码</div>
+					<div class="my_div_width">
+					<input class="my_li_width my_smallsize" type="password" placeholder="请再次输入密码" name="agupwd" id="agupwd">
+					<p class="vali_info">*<span>同上6位数字</span></p>
+					</div>
+				</li>
+				<li class="d-flex justify-content-center my_height mt-4">
+					<div class="my_secolor my_smallsize my_width text-center">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机</div>
+					<div class="my_div_width">
+					<input class="my_li_width my_smallsize" type="password" placeholder="请输入手机号码" name="phone" id="phone">
+					<p class="vali_info">*<span>11位数字</span></p>
+					</div>
+				</li>
+				<li class="d-flex justify-content-center my_height mt-5">
+          <div class="my_secolor my_smallsize my_width text-center">验证号码</div>
+          <div class="my_div_width">
+          <input class="w-25 my_smallsize" type="text" placeholder="请填入右侧代码">
+          <span class="d-inline-block w-25">123456</span>
+          </div>
+				</li>
+			</ul>
+			<div class="my_margin d-flex justify-content-center my_div_width">
+				<a class="btn btn-transparent border p-1 border-danger w-25 rounded-0 my_smallsize mr-4">重填</a>
+				<a class="btn btn-transparent border p-1 border-danger w-25 rounded-0 my_smallsize">提交</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+
+<script src="js/register.js"></script>
+
+
+
+
+
+
+
+
+<!-- 页面尾部00 -->
+<div class="my_footer">
+<div class="footDecorationLine mt-2 mb-2"></div>
+  <div class="row ml-3 mr-3 my_long_height4">
+    <div class="col-3">
+      <div class="footTitle">联络资讯</div>
+      <ul class="list-unstyled my_sedcolor my_smallsize">
+        <li class="m-0">地址：<span>41278 台中市大里區仁化工三路113號</span></li>
+        <li class="m-0">營業時間<span>Mon~Fri.  AM08:30-PM5:30</span> </li>
+        <li class="m-0">電話 <span>+886 4-24927526</span> </li>
+        <li class="m-0">傳真 <span>+886 4-24927528</span>
+        <li class="m-0">客服專線 <span>0800-303808</span></li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-4">
+          <div class="footTitle">会员中心</div>
+          <ul class="list-unstyled">
+            <li class="m-0"><a class="my_secolor my_smallsize" href="login.html">会员登录</a></li>
+            <li class="m-0"><a class="my_secolor my_smallsize" href="register.html">会员注册</a></li>
+            <li class="m-0"><a class="my_secolor my_smallsize" href="password_forget.html">忘记密码</a></li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <div class="footTitle">购物资讯</div>
+          <ul class="list-unstyled">
+            <li class="m-0"><a class="my_secolor my_smallsize" href="page03_shop.html">线上购物</a></li>
+            <li class="m-0"><a class="my_secolor my_smallsize" href="page03_product_info.html">购物须知</a></li>
+            <li class="m-0"><a class="my_secolor my_smallsize" href="#">海外会员购物</a></li>
+            <li class="m-0"><a class="my_secolor my_smallsize" href="#">隐私权政策</a></li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <div class="footTitle">美味王</div>
+          <ul class="list-unstyled">
+            <li class="m-0"><a class="my_secolor my_smallsize" href="page01.1_about.html">公司简介</a></li>
+            <li class="m-0"><a class="my_secolor my_smallsize" href="page02.1_news.html">最新消息</a></li>
+            <li class="m-0"><a class="my_secolor my_smallsize" href="page04.1_join.html">加盟专区</a></li>
+            <li class="m-0"><a class="my_secolor my_smallsize" href="#">人才招募</a></li>
+            <li class="m-0"><a class="my_secolor my_smallsize" href="#">厦门美味皇</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-3 my_smallsize">
+      <div class="mt-4 my_long_height6"><img class="my_long_height5" src="img/index_base/tel.jpg">&nbsp;&nbsp;&nbsp;<b>客服专线 0592-6617138</b></div>
+      <div class="d-flex">
+        <img class="mr-2" src="img/index_base/Iso.png">
+        <img src="img/index_base/IAF.png">
+      </div>
+    </div>
+  </div>
+<div class="my_bgcolor text-white"><p class="text-center my_ms_size m-0 pt-2 pb-2">Copyright &nbsp;&copy;&nbsp;FOODKING INTERNATIONAL FLAVORING CO.,LTD.All Rights Reserved. 美味王食品工業有限公司 版權所有</p></div>
+</div>
+
+</div>
+
+<!-- 页面尾部01 -->
+<div class="my_footer_01">
+  <div class="my_bgcolor">
+    <ul class="list-unstyled d-flex justify-content-around align-items-center  my_long_height3">
+      <li class="text-center m-0">
+      <img class="my_long_height5" src="img/index_base/product_detail_icon_d.png">
+      <p class="p-0 mb-1 text-white">会员中心</p>
+      </li>
+      <li class="text-center m-0">
+      <img class="my_long_height5" src="img/index_base/product_detail_icon_bao.png">
+      <p class="p-0 mb-1 text-white">商品专区</p>
+      </li>
+      <li class="text-center m-0">
+      <img class="my_long_height5" src="img/index_base/product_detail_img7.png">
+      <p class="p-0 mb-1 text-white">购物车</p>
+      </li>
+      <li class="text-center m-0">
+      <img class="my_long_height5" src="img/index_base/product_detail_icon_g.png">
+      <p class="p-0 mb-1 text-white">历史订单</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+</body>
 </html>
+
+	
+	
+

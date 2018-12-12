@@ -1,0 +1,35 @@
+
+.my_wh{
+    width:30%;
+    height:55%;
+}
+p a:link{
+    color:#435DFF;
+    font-size: 0.9rem;
+}
+p a:hover{
+    color:red;
+    text-decoration: none;
+    opacity: 0.5;
+}
+p a:visited{
+    color:#6f42c1;
+    font-size: 0.9rem;
+}
+.my_font{
+    font-size: 1rem;
+
+}
+.my_scolor{color:#777;}
+
+.my_w{
+    width:23%;
+    height:20%;
+}
+.font_bottom{
+    position: absolute;
+    height:24px;
+    width:100%;
+    top:0.9rem;
+    left:0;
+}
